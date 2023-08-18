@@ -1,0 +1,170 @@
+/* Add this CSS to your stylesheets or within a <style> tag in your component */
+
+
+/* Navbar background and padding */
+
+.navbar {
+    background: linear-gradient(to right, #111111, #111111);
+    box-shadow: 1px 2px 3px #817f7f;
+    padding: 5px 0;
+}
+
+
+/*search button*/
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+    cursor: pointer;
+    color: #f4f4f4;
+    margin-right: 5px;
+}
+
+
+/* Logo styles */
+
+
+/* Navigation links */
+
+.navbar-nav .nav-link {
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 15px;
+    padding: 4px 0;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #ec6608;
+    transition: 0.3s ease-in-out;
+    /* Semi-transparent background on hover */
+    color: #f4f4f4;
+    /* Change link color on hover */
+}
+
+
+/* Dropdown menu */
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    /* Show the dropdown menu on hover */
+    animation: fadeInDown 0.3s forwards;
+}
+
+
+/* Search bar and button */
+
+.form-control {
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255) !important;
+    color: white;
+}
+
+.form-control::placeholder {
+    color: #ec6608;
+}
+
+.form-control:focus {
+    color: #ec6608;
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.btn-outline-success {
+    border-color: white;
+    color: white;
+}
+
+.custom__style {
+    border-color: #ff6a00;
+    border-radius: 20px;
+    background-color: #ec6608;
+}
+
+.custom__style:hover {
+    border-color: #f4f4f4;
+    background-color: transparent;
+}
+
+
+/* Animation for dropdown menu */
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Style for profile image in the dropdown */
+
+#profile-dropdown .dropdown-toggle::after {
+    display: none;
+    /* Hide the default dropdown indicator */
+}
+
+
+/* Style for dropdown menu items */
+
+#profile-dropdown .dropdown-item {
+    color: #ffffff;
+}
+
+
+/* Style for hover effect on dropdown items */
+
+#profile-dropdown .dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Style for profile image */
+
+#profile-dropdown img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+/* Style for dropdown menu */
+
+#profile-dropdown .dropdown-menu {
+    min-width: auto;
+    /* Adjust the width as needed */
+    border: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.col-lg-4 {
+    width: 43.333333% !important;
+}
+
+.dropdown-menu {
+    --bs-dropdown-min-width: 35rem !important;
+}
+
+.d-lg-inline-block {
+    color: #ec6608;
+}
+
+.d-lg-inline-block:hover {
+    color: #ffffff;
+}
+
+
+/* font-weight: bolder; */
+
+b,
+strong {
+    /* font-weight: bolder; */
+    font-size: 12px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    color: white;
+}

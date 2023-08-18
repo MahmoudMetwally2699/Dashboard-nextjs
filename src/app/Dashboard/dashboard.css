@@ -1,0 +1,477 @@
+.layout {
+    background-color: #f4f4f4;
+    padding: 5px;
+    margin: 0 auto;
+    padding-top: 10px;
+    max-width: 1500px;
+    padding-bottom: 200px;
+}
+
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.box-content {
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 19px;
+}
+
+.chart-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.chart-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.chart-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.react-resizable-handle {
+    display: none !important;
+}
+
+.dropdown1-container {
+    margin-top: 10px;
+}
+
+.dropdown1 {
+    width: 100%;
+    padding: 5px;
+}
+
+.dashboard-container {
+    padding: 0px !important;
+}
+
+
+/* Hide default checkbox appearance */
+
+
+/* Basic style for the toggle switch */
+
+
+/* Style for the checked toggle switch */
+
+
+/* Indicator dot for the toggle switch */
+
+
+/* Position for the checked indicator dot */
+
+.css-1ps6pg7-MuiPaper-root {
+    border-radius: 26px !important;
+}
+
+.dashboard-container {
+    overflow: hidden;
+}
+
+
+/* ... Your existing CSS styles ... */
+
+.box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 16px;
+}
+
+.box:hover {
+    transform: translateY(-4px);
+}
+
+.dropdown1 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+    background-color: rgb(236, 102, 8);
+    color: white;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+
+/* dashboard.css */
+
+
+/* Styling for the dropdown1 */
+
+.dropdown1:hover {
+    background-color: #e0e0e0;
+    color: #ec6608
+}
+
+
+/* Styling for the boxes */
+
+.box {
+    /* ... existing box styles ... */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.box h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.box-content {
+    margin-top: 26px;
+    color: rgb(236, 102, 8);
+}
+
+
+/* Styling for the layout container */
+
+.dashboard-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+
+/* Improved box hover effect */
+
+.box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* dashboard.css */
+
+
+/* ... existing styles ... */
+
+
+/* Color variations */
+
+.box {
+    /* ... existing box styles ... */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    margin-bottom: 16px;
+    background-color: white !important;
+    /* border-color: rgb(236, 102, 8) !important; */
+    color: rgb(236, 102, 8) !important;
+}
+
+
+/* Color variations for different boxes */
+
+.chart-box {
+    background-color: #f4f4f4 !important;
+}
+
+.chart-box2 {
+    background-color: #f4f4f4 !important;
+}
+
+
+/* Improved box hover effect with color */
+
+.box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chart-title {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 10px 0;
+    color: #333;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    /* Add margin at the bottom */
+}
+
+
+/* Center chart content */
+
+.chart-content {
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* custom toggle */
+
+.toggleSwitch span span {
+    display: none;
+}
+
+.toggleSwitch {
+    display: inline-block;
+    height: 18px;
+    margin-top: 5px;
+    position: relative;
+    overflow: visible;
+    padding: 0;
+    cursor: pointer;
+    width: 200px;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 34px;
+    user-select: none;
+    margin: 10px 20px;
+}
+
+.toggleSwitch * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.toggleSwitch label,
+.toggleSwitch>span {
+    line-height: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.toggleSwitch input:focus~a,
+.toggleSwitch input:focus+label {
+    outline: none;
+}
+
+.toggleSwitch label {
+    position: relative;
+    z-index: 3;
+    display: block;
+    width: 100%;
+}
+
+.toggleSwitch input {
+    position: absolute;
+    opacity: 0;
+    z-index: 5;
+}
+
+.toggleSwitch>span {
+    position: absolute;
+    left: 0;
+    width: calc(100% - 6px);
+    margin: 0;
+    text-align: left;
+    white-space: nowrap;
+    margin: 0 3px;
+}
+
+.toggleSwitch>span span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: block;
+    width: 50%;
+    margin-left: 50px;
+    text-align: left;
+    font-size: 0.9em;
+    width: auto;
+    left: 0;
+    top: -1px;
+    opacity: 1;
+    width: 40%;
+    text-align: center;
+    line-height: 34px;
+}
+
+.toggleSwitch a {
+    position: absolute;
+    right: 50%;
+    z-index: 4;
+    display: block;
+    top: 3px;
+    bottom: 3px;
+    padding: 0;
+    left: 3px;
+    width: 50%;
+    background-color: #111111;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.toggleSwitch>span span:first-of-type {
+    color: #FFF;
+    opacity: 1;
+    left: 0;
+    margin: 0;
+    width: 50%;
+}
+
+.toggleSwitch>span span:last-of-type {
+    left: auto;
+    right: 0;
+    color: #999;
+    margin: 0;
+    width: 50%;
+}
+
+.toggleSwitch>span:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    /* background-color: #fafafa; */
+    /* border: 1px solid #ccc; */
+    border-radius: 30px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.toggleSwitch input:checked~a {
+    left: calc(50% - 3px);
+}
+
+.toggleSwitch input:checked~span:before {
+    /* border-color: #0097D1;
+	box-shadow: inset 0 0 0 30px #0097D1; */
+}
+
+.toggleSwitch input:checked~span span:first-of-type {
+    left: 0;
+    color: #999;
+}
+
+.toggleSwitch input:checked~span span:last-of-type {
+    /* opacity: 1;
+	color: #fff;	 */
+    color: #FFF;
+}
+
+
+/* Switch Sizes */
+
+.toggleSwitch.large {
+    width: 60px;
+    height: 27px;
+}
+
+.toggleSwitch.large a {
+    width: 27px;
+}
+
+.toggleSwitch.large>span {
+    height: 29px;
+    line-height: 28px;
+}
+
+.toggleSwitch.large input:checked~a {
+    left: 41px;
+}
+
+.toggleSwitch.large>span span {
+    font-size: 1.1em;
+}
+
+.toggleSwitch.large>span span:first-of-type {
+    left: 50%;
+}
+
+.toggleSwitch.xlarge {
+    width: 80px;
+    height: 36px;
+}
+
+.toggleSwitch.xlarge a {
+    width: 36px;
+}
+
+.toggleSwitch.xlarge>span {
+    height: 38px;
+    line-height: 37px;
+}
+
+.toggleSwitch.xlarge input:checked~a {
+    left: 52px;
+}
+
+.toggleSwitch.xlarge>span span {
+    font-size: 1.4em;
+}
+
+.toggleSwitch.xlarge>span span:first-of-type {
+    left: 50%;
+}
+
+.preloader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.progress{
+    color: #ec6608;
+}
+
+.preloader-container p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#profile-dropdown .dropdown-item {
+    color: #ec6608 !important;
+}
+
+.css-1szo49z-MuiCircularProgress-root {
+    color: orangered !important;
+}
+
+.recharts-cartesian-axis-tick-value {
+    font-size: 12px;
+    /* Adjust the font size as needed */
+}
+
+.d-lg-inline-block {
+    color: #e6e9ef !important;
+}

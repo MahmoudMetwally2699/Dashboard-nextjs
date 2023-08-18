@@ -1,95 +1,101 @@
+'use client'
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Link from "next/link";
 import Image from 'next/image'
-import styles from './page.module.css'
+import'./login.css'
+import Logo from "../../public/Logo.png";
+import { login } from "../../src/redux/features/login";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import { useRouter } from 'next/navigation'
 
-export default function Home() {
+const Login = () => {
+  const router = useRouter()
+
+  
+  const dispatch = useDispatch();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    
+    <section>
+      <div className="login-box">
+        <div className="logo__login">
+          <Image width={60} height={60} src={Logo} alt="Logo" />
         </div>
+        <p className="title">Login</p>
+        <Form method="post">
+          <Form.Group className="user-box">
+            <Form.Control
+              required="username"
+              name="username"
+              type="text"
+              value={username}
+              onChange={(event) => {
+                setUsername(event.target.value);
+              }}
+            />
+            <Form.Label>User Name</Form.Label>
+          </Form.Group>
+          <Form.Group className="user-box">
+            <Form.Control
+              required="password"
+              name="password"
+              type="password"
+              value={password}
+              onChange={(event) => {
+                setPassword(event.target.value);
+              }}
+            />
+            <Form.Label>Password</Form.Label>
+          </Form.Group>
+          <Link
+          href=''
+            onClick={(event) => {
+              event.preventDefault();
+              const formData = {
+                username,
+                password,
+              };
+              const jsonData = JSON.stringify(formData);
+              console.log(jsonData);
+              dispatch(login(jsonData));
+              const user = dispatch(login(jsonData)).then(
+                (data) => {
+                  const data1=data?.payload?.status;
+                  if (data1 === 'success'){
+                    router.push('/Dashboard')
+                  }
+                  
+                },
+                (error) => {
+                  console.log(error);
+                }
+              );
+            }}  
+            type="submit"
+            className="btn-submit "
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </Link>
+        </Form>
+        <p>
+          Don't have an account?
+          <Link href="/signup" className="a2">
+            Sign up!
+          </Link>
+        </p>
       </div>
+    </section>
+  );
+};
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default Login;
